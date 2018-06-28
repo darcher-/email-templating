@@ -18,3 +18,38 @@ A modern approach to email templating
 - [ ] create various themes for template
 - [ ] additional element styling
 - [ ] additional modules
+
+**Layout code block description:**
+Majority of your code will be repetative with slight variations, primarily in width's.
+
+```HTML
+
+<table>
+  <tr>
+    <td>
+      <!--[if (gte mso 9)|(IE)]>
+      <table align="center" bgcolor="{{six digit hex color e.g. #ffffff}}" border="0" cellpadding="0" cellspacing="0" width="{{pixel value width e.g. 640}}">
+        <tr>
+          <td align="center" style="font-size:0;" valign="top" width="{{percent value width e.g. 100%}}">
+      <![endif]-->
+
+      <div>
+        <table>
+          <tr>
+            <td>
+              <div>...</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+  
+      <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+```
