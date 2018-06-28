@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Untitled</title>
+
+  <style data-ignore-inlining>
+    body {
+      font: 300 16px/1.45 sans-serif;
+      margin: 0;
+      background-color: #ecf0f1
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    ol {
+      margin: 0;
+      font: 300 16px/1.45 sans-serif
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: bottom
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 0
+    }
+
+    td {
+      font-size: 0;
+      padding: 0;
+      text-align: center;
+      vertical-align: top
+    }
+
+    @media all and (max-width:480px) {
+      body {
+        font-size: 14px !important
+      }
+      .h1 {
+        font-size: 28px !important
+      }
+      .h2 {
+        font-size: 20px !important
+      }
+      .p {
+        font-size: 13px !important
+      }
+    }
+
+    /** even up all columns in mobile for clients that support it */
+
+    @media all and (max-width:600px) {
+      .three-col .col,
+      .sidebar-right .col,
+      .sidebar-left .col {
+        max-width: 300px !important
+      }
+    }
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important
+    }
+
+  </style>
+
+  <style>
+    /** ELEMENT DEFAULTS */
+
+    body {
+      font: 300 16px/1.45 sans-serif;
+      margin: 0
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    ol {
+      margin: 0
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: bottom
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 0;
+    }
+
+    td {
+      font-size: 0
+    }
+
+    /* button styles */
+
+    .btn-default,
+    .btn-callout {
+      text-decoration: none;
+      /* border-radius: 100px; */
+      display: inline-block;
+      padding: 12px 32px;
+      mso-padding-alt: 0;
+      vertical-align: middle;
+      text-decoration: none !important
+    }
+
+
+    /** LAYOUT */
+
+    .wrapper {
+      padding: 20px 0;
+    }
+
+    .container,
+    .table-container {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .table-container>tr>td {
+      padding: 10px;
+    }
+
+    .module {
+      max-width: 580px
+    }
+
+    .col,
+    .container {
+      Margin: 0 auto
+    }
+
+    .template,
+    .module,
+    .col-fill {
+      width: 100%
+    }
+
+    .col {
+      display: inline-block
+    }
+
+    /* column widths */
+
+    .two-col .col {
+      max-width: 280px
+    }
+
+    /* use max-width if larger then 320px */
+
+    .three-col .col {
+      max-width: 186px
+    }
+
+    /* use max-width if larger then 320px */
+
+    .sidebar-right .col-right,
+    .sidebar-left .col-left {
+      max-width: 186px;
+    }
+
+    .sidebar-right .col-left,
+    .sidebar-left .col-right {
+      max-width: 373px;
+    }
+
+
+    /** UTITLITIES */
+
+    /* alignment */
+
+    .text-middle {
+      vertical-align: middle
+    }
+
+    .text-top {
+      vertical-align: top
+    }
+
+    .text-left {
+      text-align: left
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-right {
+      text-align: right
+    }
+
+    /* spacing */
+
+    .pad-below-xl {
+      padding-bottom: 32px
+    }
+
+    .pad-below-lg {
+      padding-bottom: 16px
+    }
+
+    .pad-below-md {
+      padding-bottom: 8px
+    }
+
+    .pad-below-sm {
+      padding-bottom: 4px
+    }
+
+    .space-below-xl {
+      Margin-bottom: 32px
+    }
+
+    .space-below-lg {
+      Margin-bottom: 16px
+    }
+
+    .space-below-md {
+      Margin-bottom: 8px
+    }
+
+    .space-below-sm {
+      Margin-bottom: 4px
+    }
+
+
+    /** FONT STYLES */
+
+    .h1 {
+      font: 300 38px/1.25 sans-serif
+    }
+
+    .h2 {
+      font: 300 26px/1.25 sans-serif
+    }
+
+    .p {
+      font: 300 16px/1.45 sans-serif
+    }
+
+    .a {
+      font: 300 16px/1.45 sans-serif
+    }
+
+
+    /** PADDING */
+
+    /* padding around content */
+
+    .content {
+      padding: 16px 32px;
+    }
+
+    .media-fill img {
+      width: 100%;
+    }
+
+    /* add padding around images */
+
+    .media-padded {
+      padding: 8px 16px;
+    }
+
+
+    /** COLOR SCHEME */
+
+    .template,
+    .wrapper,
+    body {
+      background-color: #ffffff
+    }
+
+    .table-container {
+      background-color: #44aaff;
+    }
+
+    .module {
+      background-color: #ecf0f1
+    }
+
+    .btn-callout {
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      color: #00bef0;
+      mso-border-alt: 8px solid #ffffff
+    }
+
+    .btn-default {
+      background-color: #00bef0;
+      border: 1px solid #00bef0;
+      color: #ffffff;
+      mso-border-alt: 8px solid #00bef0
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <table class="template">
+      <tr>
+        <td class="text-center">
+          <!--[if (gte mso 9)|(IE)]>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+<td align="center" style="font-size:0;" valign="top">
+<![endif]-->
+          <div class="container">
+            <table class="table-container">
+              <tr>
+                <td>
+                  <table class="module body" align="center">
+                    <tr>
+                      <td class="text-center text-top pad-below-lg">
+                        <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="580">
+<tr>
+<td align="center" style="font-size:0;" valign="top">
+<![endif]-->
+                        <div class="col col-fill text-top" id="body-heading">
+                          <table align="center">
+                            <tr>
+                              <td class="content text-center">
+                                <h1 class="h1">Lorem Ipsum</h1>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col col-fill text-top" id="body-banner">
+                          <table align="center">
+                            <tr>
+                              <td class="media-padded text-center">
+                                <a href="##" class="image-anchor" title="Banner Image"><img src="https://placehold.it/548x250" border="0" class="image" width="548" height="250" alt="Banner Image"></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col col-fill text-top" id="body-subheading">
+                          <table align="center">
+                            <tr>
+                              <td class="content text-center">
+                                <h2 class="h2 space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus.</h2>
+                                <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
+                                <div class="p"><a href="##" class="btn-default">Call to Action</a></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="module body" align="center">
+                    <tr>
+                      <td class="text-center text-top pad-below-lg">
+                        <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="580">
+<tr>
+<td align="center" style="font-size:0;" valign="top">
+<![endif]-->
+                        <div class="col col-fill text-top" id="body-banner">
+                          <table align="center">
+                            <tr>
+                              <td class="media-padded text-center">
+                                <a href="##" class="image-anchor" title="Banner Image"><img src="https://placehold.it/548x250" border="0" class="image" width="548" height="250" alt="Banner Image"></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col col-fill text-top" id="body-subheading">
+                          <table align="center">
+                            <tr>
+                              <td class="content text-center">
+                                <h2 class="h2 space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus.</h2>
+                                <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
+                                <div class="p"><a href="##" class="btn-default">Call to Action</a></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="module body" align="center">
+                    <tr>
+                      <td class="text-center text-top pad-below-lg">
+                        <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="580">
+<tr>
+<td align="center" style="font-size:0;" valign="top">
+<![endif]-->
+                        <div class="col col-fill text-top" id="body-banner">
+                          <table align="center">
+                            <tr>
+                              <td class="media-padded text-center">
+                                <a href="##" class="image-anchor" title="Banner Image"><img src="https://placehold.it/548x250" border="0" class="image" width="548" height="250" alt="Banner Image"></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col col-fill text-top" id="body-subheading">
+                          <table align="center">
+                            <tr>
+                              <td class="content text-center">
+                                <h2 class="h2 space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus.</h2>
+                                <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
+                                <div class="p"><a href="##" class="btn-default">Call to Action</a></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
