@@ -1,0 +1,26 @@
+/* button styles */
+
+.btn-default,
+.btn-callout {
+  text-decoration: none;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 12px 32px;
+  mso-padding-alt: 0;
+  vertical-align: middle;
+  text-decoration: none !important
+}
+
+/** FONT STYLES */
+
+.h1 {
+  font: 300 38px/1.25 sans-serif
+}
+
+.p {
+  font: 300 16px/1.45 sans-serif
+}
+
+.a {
+  font: 300 16px/1.45 sans-serif
+}

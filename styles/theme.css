@@ -1,0 +1,25 @@
+/** COLOR SCHEME */
+
+.template,
+.wrapper,
+body {
+  background-color: #ecf0f1
+}
+
+.container {
+  background-color: #ffffff
+}
+
+.btn-callout {
+  color: #00bef0;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  mso-border-alt: 8px solid #ffffff
+}
+
+.btn-default {
+  color: #ffffff;
+  background-color: #00bef0;
+  border: 1px solid #00bef0;
+  mso-border-alt: 8px solid #00bef0
+}

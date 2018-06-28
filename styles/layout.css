@@ -1,0 +1,120 @@
+/** LAYOUT PADDING */
+
+/* padding around content */
+
+.content {
+  padding: 16px 32px;
+}
+
+/* add padding around images */
+
+.media-padded {
+  padding: 8px 16px;
+}
+
+
+/** LAYOUT */
+
+.container,
+.module {
+  max-width: 640px
+}
+
+.col,
+.container {
+  Margin: 0 auto
+}
+
+.media-fill img,
+.template,
+.module,
+.col-fill {
+  width: 100%
+}
+
+.col {
+  display: inline-block
+}
+
+/* column widths */
+
+.two-col .col {
+  max-width: 320px
+}
+
+/* use max-width if larger then 320px */
+
+.three-col .col {
+  max-width: 213px
+}
+
+/* use max-width if larger then 320px */
+
+.sidebar-right .col-right,
+.sidebar-left .col-left {
+  max-width: 220px;
+}
+
+.sidebar-right .col-left,
+.sidebar-left .col-right {
+  max-width: 420px;
+}
+
+
+/** UTITLITIES */
+
+/* alignment */
+
+.text-middle {
+  vertical-align: middle
+}
+
+.text-top {
+  vertical-align: top
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-right {
+  text-align: right
+}
+
+/* spacing */
+
+.pad-below-xl {
+  padding-bottom: 32px
+}
+
+.pad-below-lg {
+  padding-bottom: 16px
+}
+
+.pad-below-md {
+  padding-bottom: 8px
+}
+
+.pad-below-sm {
+  padding-bottom: 4px
+}
+
+.space-below-xl {
+  Margin-bottom: 32px
+}
+
+.space-below-lg {
+  Margin-bottom: 16px
+}
+
+.space-below-md {
+  Margin-bottom: 8px
+}
+
+.space-below-sm {
+  Margin-bottom: 4px
+}
