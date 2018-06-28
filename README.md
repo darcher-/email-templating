@@ -14,7 +14,7 @@ A modern approach to email templating
 
 ###### To Do
 - [x] initial upload of base layout and elements
-- [] inlined versions
-- [] create various themes for template
-- [] additional element styling
-- [] additional modules
+- [ ] inlined versions
+- [ ] create various themes for template
+- [ ] additional element styling
+- [ ] additional modules
