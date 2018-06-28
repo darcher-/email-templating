@@ -1,0 +1,31 @@
+/** ELEMENT DEFAULTS */
+
+body {
+  font: 300 16px/1.45 sans-serif;
+  margin: 0
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol {
+  margin: 0
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+td {
+  font-size: 0
+}
