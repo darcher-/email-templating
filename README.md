@@ -208,8 +208,6 @@ Adding borders is as simple as adding one class.
 <table class="module flat">
 ```
 
-**As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
-
 ---
 
 ### CSS (Styling)
