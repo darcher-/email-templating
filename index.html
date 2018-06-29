@@ -70,12 +70,37 @@
 
       .media-padded { padding: 8px 16px }
 
-      .border-padded { padding: 1px }
+      /*!
+
+          size of border around modules (applies to .frame & .pane classes)
+
+          * you'll need to update the `.inner` class `max-width` to accomodate increase/decrease in sizes
+          * subtract 2x the size of whatever this padding value is from the largest wrapper width.
+
+          e.g. 1*2=2 & 640-2=638, 2*2=4 & 640-4=646, etc.
+
+          as well as reduce the widths of .two-col .col, etc. by 1px per px.
+
+      */
+
+      .frame { padding: 2px }
+      .pane { max-width: 636px }
+
+      /* column widths */
+
+      .two-col .col { max-width: 318px }
+
+      .three-col .col { max-width: 211px }
+
+      .sidebar-right .col-right,
+      .sidebar-left .col-left { max-width: 218px }
+
+      .sidebar-right .col-left,
+      .sidebar-left .col-right { max-width: 418px }
 
       /** LAYOUT */
 
       .container, .module { max-width: 640px }
-      .inner{ max-width: 638px }
 
       .col, .container { Margin: 0 auto }
 
@@ -85,19 +110,6 @@
       .col-fill { width: 100% }
 
       .col { display: inline-block }
-
-      /* column widths */
-
-      .two-col .col { max-width: 319px }
-
-      .three-col .col { max-width: 212px }
-
-      .sidebar-right .col-right,
-      .sidebar-left .col-left { max-width: 219px }
-
-      .sidebar-right .col-left,
-      .sidebar-left .col-right { max-width: 419px }
-
 
       /** UTITLITIES */
 
@@ -137,13 +149,16 @@
       .p { font: 300 16px/1.45 sans-serif }
       .a { font: 300 16px/1.45 sans-serif }
 
-      /** COLOR SCHEME */
+      /**
+        COLOR SCHEME
+        this is a very base styling, will expand upon it.
+      */
 
       body, .template, .container { background-color: #ecf0f1 }
 
-      .module:not(.bordered), .inner { background-color:#ffffff }
-
-      .bordered { background-color:#44aaff }
+      .bordered { background-color: #44aaff }
+      .flat,
+      .bordered .pane { background-color:#ffffff }
 
       .btn-bordered {
         color: #00bef0;
@@ -204,8 +219,8 @@
             <div class="space-below-xl">
               <table class="module sidebar-left bordered">
                 <tr>
-                  <td class="border-padded">
-                    <table class="inner">
+                  <td class="frame">
+                    <table class="pane">
                       <tr>
                         <td class="text-center text-top">
                           <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="638"><tr><td align="center" style="font-size:0;" valign="top" width="33.333%"><![endif]-->
