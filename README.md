@@ -40,7 +40,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 `.col` fits to content, use `.col-fill` to force `100%` width to fill empty whitespace.
 
 ```HTML
-<table class="module two-col flat">
+<table class="module flat">
   <tr>
     <td class="frame">
       <table class="pane">
@@ -178,7 +178,7 @@ This is identical to the two column modules, the below snippet would be added di
 * conditional comments `<td>` gets a `width="33.333%"` to accomodate Outlook Express engine clients.
 
 ```HTML
-<table class="module two-col flat">
+<table class="module three-col flat">
 ...
 <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="33.333%"><![endif]-->
 <div class="col col-fill text-top">
