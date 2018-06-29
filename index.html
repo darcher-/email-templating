@@ -1,92 +1,253 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
-  
-  <meta charset="utf-8">
-  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <title>Modern Template</title>
-  
-  <style data-ignore-inlining>
-    
-    body {
-      font: 300 16px/1.45 sans-serif;
-      margin: 0;
-      background-color: #ecf0f1 }
+  <head>
 
-    p, h1, h2, h3, h4, ul, ol {
-      margin: 0;
-      font: 300 16px/1.45 sans-serif }
+    <meta charset="utf-8">
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    img {
-      max-width: 100%;
-      height: auto;
-      vertical-align: bottom }
+    <title>Modern Template</title>
 
-    table {
-      border-collapse: collapse;
-      border: 0 }
+    <style data-ignore-inlining>
 
-    td {
-      font-size: 0;
-      padding: 0;
-      text-align: center;
-      vertical-align: top }
+      body {
+        font: 300 16px/1.45 sans-serif;
+        margin: 0;
+        background-color: #ecf0f1 }
+      p, h1, h2, h3, h4, ul, ol {
+        margin: 0;
+        font: 300 16px/1.45 sans-serif }
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: bottom }
+      table {
+        border-collapse: collapse;
+        border: 0 }
+      td {
+        font-size: 0;
+        padding: 0;
+        text-align: center;
+        vertical-align: top }
+      @media all and (max-width:480px) {
+        body { font-size: 14px !important }
+        .h1 { font-size: 28px !important }
+      }
+      /** even up all columns in mobile for clients that support it */
+      @media all and (max-width:640px) {
+        .three-col .col,
+        .sidebar-right .col,
+        .sidebar-left .col { max-width: 320px !important }
+      }
+      div[style*="margin: 16px 0"] { margin: 0 !important }
 
-    @media all and (max-width:480px) {
-      body { font-size: 14px !important }
-      .h1 { font-size: 28px !important }
-    }
+    </style>
 
-    /** even up all columns in mobile for clients that support it */
+    <style>
+      /** all below styles need to be inlined (not embedded) */
+      /** ELEMENT DEFAULTS */
 
-    @media all and (max-width:640px) {
-      .three-col .col,
-      .sidebar-right .col,
-      .sidebar-left .col { max-width: 320px !important }
-    }
+      body {
+        font: 300 16px/1.45 sans-serif;
+        margin: 0 }
 
-    div[style*="margin: 16px 0"] { margin: 0 !important }
-    
-  </style>
-  
-  <link href="styles/defaults.css" rel="stylesheet">
-  <link href="styles/layout.css" rel="stylesheet">
-  <link href="styles/elements.css" rel="stylesheet">
-  <link href="styles/theme.css" rel="stylesheet">
-  
-</head>
+      p, h1, h2, h3, h4, ul, ol { margin: 0 }
 
-<body>
-  
-  <table class="template">
-    <tr>
-      <td class="text-center">
-        
-        <!--[if (gte mso 9)|(IE)]>
-        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="640">
-          <tr>
-            <td align="center" style="font-size:0;" valign="top">
-        <![endif]-->
-        
-        <div class="container">
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: bottom }
 
-          <!-- insert modules -->
+      table {
+        border-collapse: collapse;
+        border: 0 }
+      td { font-size: 0 }
 
-        </div>
-        
-        <!--[if (gte mso 9)|(IE)]>
-            </td>
-          </tr>
-        </table>
-        <![endif]-->
-        
-      </td>
-    </tr>
-  </table>
-  
-</body>
+      /** PADDING */
+
+      .content { padding: 16px 32px }
+
+      .media-padded { padding: 8px 16px }
+
+      .border-padded { padding: 1px }
+
+      /** LAYOUT */
+
+      .container, .module { max-width: 640px }
+      .inner{ max-width: 638px }
+
+      .col, .container { Margin: 0 auto }
+
+      .media-fill img,
+      .template,
+      .module,
+      .col-fill { width: 100% }
+
+      .col { display: inline-block }
+
+      /* column widths */
+
+      .two-col .col { max-width: 319px }
+
+      .three-col .col { max-width: 212px }
+
+      .sidebar-right .col-right,
+      .sidebar-left .col-left { max-width: 219px }
+
+      .sidebar-right .col-left,
+      .sidebar-left .col-right { max-width: 419px }
+
+
+      /** UTITLITIES */
+
+      /* alignment */
+
+      .text-middle { vertical-align: middle }
+      .text-top { vertical-align: top }
+      .text-left { text-align: left }
+      .text-center { text-align: center }
+      .text-right { text-align: right }
+
+      /* spacing */
+
+      .pad-below-xl { padding-bottom: 32px }
+      .pad-below-lg { padding-bottom: 16px }
+      .pad-below-md { padding-bottom: 8px }
+      .pad-below-sm { padding-bottom: 4px }
+
+      .space-below-xl { Margin-bottom: 32px }
+      .space-below-lg { Margin-bottom: 16px }
+      .space-below-md { Margin-bottom: 8px }
+      .space-below-sm { Margin-bottom: 4px }
+
+      /** CALL TO ACTION STYLES */
+
+      .btn-default, .btn-callout, .btn-bordered, .btn-subdued {
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 32px;
+        mso-padding-alt: 0;
+        vertical-align: middle;
+        text-decoration: none !important }
+
+      /** FONT STYLES */
+
+      .h1 { font: 300 38px/1.25 sans-serif }
+      .p { font: 300 16px/1.45 sans-serif }
+      .a { font: 300 16px/1.45 sans-serif }
+
+      /** COLOR SCHEME */
+
+      body, .template, .container { background-color: #ecf0f1 }
+
+      .module:not(.bordered), .inner { background-color:#ffffff }
+
+      .bordered { background-color:#44aaff }
+
+      .btn-bordered {
+        color: #00bef0;
+        background-color: #ffffff;
+        border: 1px solid #00bef0;
+        mso-border-alt: 8px solid #ffffff }
+
+      .btn-callout {
+        color: #ffffff;
+        background-color: #00bef0;
+        border: 1px solid #00bef0;
+        mso-border-alt: 8px solid #00bef0 }
+
+      .btn-default {
+        color: #ffffff;
+        background-color: #444444;
+        border: 1px solid #444444;
+        mso-border-alt: 8px solid #444444 }
+
+      .btn-subdued {
+        color: #ffffff;
+        background-color: #999999;
+        border: 1px solid #999999;
+        mso-border-alt: 8px solid #999999 }
+
+      .a-callout { color: #00bef0 }
+      .a-subdued { color: #999999 }
+
+      .a-default,
+      .h1,
+      .p { color: #444444 }
+
+      /** BORDER EDGES */
+
+      .btn-default, .btn-callout, .btn-bordered, .btn-subdued { border-radius: 2px }
+      .module { border-radius:2px }
+      .inner { border-radius:1px }
+
+    </style>
+
+    </head>
+
+  <body>
+
+    <table class="template">
+      <tr>
+        <td class="text-center">
+
+          <!--[if (gte mso 9)|(IE)]><table align="center" border="0" cellpadding="0" cellspacing="0" width="640"><tr><td align="center" style="font-size:0" valign="top"><![endif]-->
+
+          <div class="container">
+
+            <!-- insert modules -->
+
+
+            <!-- #BEGIN: Left Sidebar Example -->
+
+            <div class="space-below-xl">
+              <table class="module sidebar-left bordered">
+                <tr>
+                  <td class="border-padded">
+                    <table class="inner">
+                      <tr>
+                        <td class="text-center text-top">
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="638"><tr><td align="center" style="font-size:0;" valign="top" width="33.333%"><![endif]-->
+                          <div class="col col-left col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-left">
+                                  <div class="p">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0;" valign="top" width="66.666%"><![endif]-->
+                          <div class="col col-right col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-left">
+                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
+                                  <div class="p"><a href="##" class="btn-callout">Call to action</a></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- #END: Left Sidebar Example -->
+
+          </div>
+
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+        </td>
+      </tr>
+    </table>
+
+  </body>
 
 </html>
