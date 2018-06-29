@@ -1,19 +1,11 @@
 # modern-email
 A modern approach to email templating
 
-**requires use of inliner (e.g. https://putsmail.com/inliner or Litmus inlining tool)**
-
-#### Support
-- Outlook 2002-2016, outlook.com & Windows Mail (Outlook Express & DPI versions **are supported**)
-- Yahoo Mail
-- Lotus 8.5+ (Lotus 7 **not supported**)
-- Gmail, New Gmail, & Inbox
-- Android 4.4+
-- iOS/Apple Mail (All versions)
-- AOL Mail
+**requires use of inliner (e.g. https://putsmail.com/inliner)**
 
 ##### To Do
 - [x] initial upload of base layout and elements
+- [ ] documentation
 - [ ] compiled & inlined versions
 - [ ] create various themes for template
 - [ ] additional element styling
@@ -24,7 +16,7 @@ A modern approach to email templating
 ### Modules
 Majority of your code will be repetative with slight variations, primarily in width's.
 
-##### Single column Module
+#### Single column Module
 
 `.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
 
@@ -54,7 +46,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 </table>
 ```
 
-##### Two column modules
+#### Two column modules
 
 * adding a `.two-col` class onto the `.module` wrapper will apply a max-width `.col` class allowing space for 2 columns.
 * conditional comments `<td>` gets a `width="50%"` to accomodate Outlook Express engine clients.
@@ -95,7 +87,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 </table>
 ```
 
-##### Three column modules
+#### Three column modules
 This is identical to the two column modules, the below snippet would be added directly following the last `.col` closing `</div>` and then updating the widths as you did in the `.two-col` module. 
 
 * adding a `.three-col` in place of the `.two-col` class on the `.module` wrapper will apply a max-width `.col` class allowing space for 3 columns.
@@ -118,7 +110,7 @@ This is identical to the two column modules, the below snippet would be added di
 
 **As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
 
-###### Alternating columns
+#### Alternating columns
 To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
 
 ```HTML
@@ -130,3 +122,15 @@ To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you w
 ...
 
 ```
+
+---
+
+#### Support
+- Outlook 2002-2016, outlook.com & Windows Mail (Outlook Express & DPI versions **are supported**)
+- Yahoo Mail
+- Lotus 8.5+ (Lotus 7 **not supported**)
+- Gmail, New Gmail, & Inbox
+- Android 4.4+
+- iOS/Apple Mail (All versions)
+- AOL Mail
+
