@@ -213,10 +213,12 @@ Adding borders is as simple as adding one class.
 <a name="css"/>
 
 ### CSS (Styling)
+Margins, fonts, and paddings are all stripped to normalize emails across the board they're applied by classes further down the line only when needed.
 
 <a name="utils"/>
 
 #### Utilitiy Classes
+These utilities help keep spacing and alignment of content easier to manage.
 
 | Class           | Property       | Value  |
 |:--------------- |:-------------- |:------ |
