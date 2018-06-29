@@ -12,14 +12,14 @@ A modern approach to email templating
 - iOS/Apple Mail (All versions)
 - AOL Mail
 
-###### To Do
+##### To Do
 - [x] initial upload of base layout and elements
 - [ ] inlined versions
 - [ ] create various themes for template
 - [ ] additional element styling
 - [ ] additional modules
 
-######Modules
+###### Modules
 Majority of your code will be repetative with slight variations, primarily in width's.
 
 + `.col` container will only need an additional class if it's a sidebar or uneven width.
@@ -42,7 +42,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 
 ---
 
-######Alternating columns
+###### Alternating columns
 To alternate columns, utilize the `dir="rtl"` attribute, you will need to reset the direction on the `.content` wrapper, you just want to invert the containers.
 
 ```HTML
