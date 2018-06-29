@@ -22,9 +22,10 @@ A modern approach to email templating
 ###### Modules
 Majority of your code will be repetative with slight variations, primarily in width's.
 
-+ `.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
-+ conditional comment `<td>` will require a `width` attribute with a `%` value if more than one column is present.
-+ `.two-col` and `.three-col` adjusts `max-width` values, but conditional comment `<td>`'s values will need to update to `50%` or `33.333%` respectively (if offset, e.g. sidebars, the larger column's `<td>` will need a width of `66.666%`).
+* `.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
+* add `.two-col` or `.three-col` to the `.module` container for column modules.
+  * conditional comment `<td>` will require a `width` attribute with a `%` value if more than one column is present.
+  * `.two-col` and `.three-col` adjusts `max-width` values, but conditional comment `<td>`'s values will need to update to `50%` or `33.333%` respectively (if offset, e.g. sidebars, the larger column's `<td>` will need a width of `66.666%`).
 
 ```HTML
 <table class="module bordered">
