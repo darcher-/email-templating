@@ -1,11 +1,15 @@
-# modern-email
+# Modern Email Framework
 A modern approach to email templating
 
-**requires use of inliner (e.g. https://putsmail.com/inliner)**
+**requires use of inliner (e.g. https://putsmail.com/inliner) to compile final production code**
 
 ##### To Do
 - [x] initial upload of base layout and elements
 - [ ] documentation
+  - [x] Modules
+  - [ ] Helper Classes
+  - [ ] Table for Classes
+  - [ ] etc.
 - [ ] compiled & inlined versions
 - [ ] create various themes for template
 - [ ] additional element styling
@@ -109,7 +113,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 Images need to be handled slightly differently then text content, as such, there are a few adjustments to accomodate this.
 
 * `.media-fill` (fill container) and `.media-padded` (space around image) classes on wrapping `<td>`
-* `<table>` housing the image needs to be set to `align='center'`
+* `<table>` housing the image needs to be set to `align="center"`
 * `.text-middle` and  `valign="middle"` replace `top` values (if you want vertically alignmed middle).
 
 ```HTML
