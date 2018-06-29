@@ -18,7 +18,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 
 #### Single column Module
 
-`.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
+`.col` fits to content, use `.col-fill` to force `100%` width to fill empty whitespace.
 
 ```HTML
 <table class="module two-col">
