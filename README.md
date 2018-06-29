@@ -164,9 +164,9 @@ To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you w
 ```HTML
 <table class="pane">
   <tr>
-    <td class="text-center text-top" dir="rtl">
+    <td class="text-center text-middle" dir="rtl">
 ... 
-      <td class="content text-left" dir="ltr">
+      <td class="media-fill text-center" dir="ltr">
 ...
       <td class="content text-left" dir="ltr">
 ...
