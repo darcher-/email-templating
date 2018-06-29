@@ -105,7 +105,11 @@ Majority of your code will be repetative with slight variations, primarily in wi
 <a name="imgcol"/>
 
 #### Images columns
-To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
+Images need to be handled slightly differently then text content, as such, there are a few adjustments to accomodate this.
+
+* `.media-fill` (fill container) and `.media-padded` (space around image) classes on wrapping `<td>`
+* `<table>` housing the image needs to be set to `align='center'`
+* `.text-middle` and  `valign="middle"` replace `top` values (if you want vertically alignmed middle).
 
 ```HTML
 <table class="module two-col">
@@ -113,8 +117,8 @@ To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you w
     <td class="frame">
       <table class="pane">
         <tr>
-          <td class="text-center text-top">
-            <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+          <td class="text-center text-middle">
+            <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0" valign="middle" width="50%"><![endif]-->
             <div class="col col-fill text-middle">
               <table align="center">
                 <tr>
@@ -125,7 +129,7 @@ To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you w
                 </tr>
               </table>
             </div>
-            <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+            <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="middle" width="50%"><![endif]-->
             <div class="col col-fill text-middle">
               <table>
                 <tr>
