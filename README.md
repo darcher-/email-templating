@@ -21,7 +21,7 @@ A modern approach to email templating
   * [One Column](#onecol)
   * [Two Columns](#twocol)
     * [Image Columns](#imgcol) 
-    * [Alternate Columns](#altcol) 
+    * [Inverting Columns](#altcol) 
   * [Three Columns](#threecol)
   * [Borders](#borders)
 * [CSS](#css)
@@ -158,8 +158,8 @@ Images need to be handled slightly differently then text content, as such, there
 
 <a name="altcol"/>
 
-#### Alternating columns
-To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
+#### Inverting columns
+To invert columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
 
 ```HTML
 <table class="pane">
