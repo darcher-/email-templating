@@ -11,7 +11,7 @@ A modern approach to email templating
 - [ ] additional element styling
 - [ ] additional modules
 
-##### Table of Contents 
+#### Table of Contents 
 
 * [Modules](#modules)
   * [One Column](#onecol)
@@ -19,6 +19,7 @@ A modern approach to email templating
     * [Image Columns](#imgcol) 
     * [Alternate Columns](#altcol) 
   * [Three Columns](#threecol)   
+* [Support](#support)
 
 ---
 
@@ -190,6 +191,8 @@ This is identical to the two column modules, the below snippet would be added di
 **As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
 
 ---
+
+<a name="support"/>
 
 #### Support
 - Outlook 2002-2016, outlook.com & Windows Mail (Outlook Express & DPI versions **are supported**)
