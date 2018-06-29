@@ -155,8 +155,8 @@
       */
 
       body, .template, .container { background-color: #ecf0f1 }
-
-      .bordered { background-color: #44aaff }
+      .callout,
+      .bordered { background-color: #00bef0 }
       .flat,
       .bordered .pane { background-color:#ffffff }
 
@@ -179,17 +179,24 @@
         mso-border-alt: 8px solid #444444 }
 
       .btn-subdued {
-        color: #ffffff;
-        background-color: #999999;
-        border: 1px solid #999999;
-        mso-border-alt: 8px solid #999999 }
+        color: #00bef0;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        mso-border-alt: 8px solid #ffffff }
 
       .a-callout { color: #00bef0 }
-      .a-subdued { color: #999999 }
-
-      .a-default,
-      .h1,
-      .p { color: #444444 }
+      .a-subdued { color: #ffffff }
+      
+      .callout .a-default,
+      .callout .h1,
+      .callout .p { color: #ffffff }
+      
+      .flat .a-default,
+      .bordered .a-default,
+      .flat .h1,
+      .bordered .h1,
+      .flat .p,
+      .bordered .p { color: #444444 }
 
       /** BORDER EDGES */
 
@@ -211,11 +218,10 @@
 
           <div class="container">
 
+            <div class="p"><br></div>
             <!-- insert modules -->
 
-
             <!-- #BEGIN: Left Sidebar Example -->
-
             <div class="space-below-xl">
               <table class="module sidebar-left bordered">
                 <tr>
@@ -223,7 +229,7 @@
                     <table class="pane">
                       <tr>
                         <td class="text-center text-top">
-                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="638"><tr><td align="center" style="font-size:0;" valign="top" width="33.333%"><![endif]-->
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="top" width="33.333%"><![endif]-->
                           <div class="col col-left col-fill text-top">
                             <table>
                               <tr>
@@ -253,7 +259,105 @@
               </table>
             </div>
 
-            <!-- #END: Left Sidebar Example -->
+            <!-- #END: Two Column Example -->
+            <div class="space-below-xl">
+              <table class="module two-col flat">
+                <tr>
+                  <td class="frame">
+                    <table class="pane">
+                      <tr>
+                        <td class="text-center text-top" dir="rtl">
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="top" width="50%"><![endif]-->
+                          <div class="col col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-left" dir="ltr">
+                                  <div class="p">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0;" valign="top" width="50%"><![endif]-->
+                          <div class="col col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-left" dir="ltr">
+                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
+                                  <div class="p"><a href="##" class="a-callout">Call to action</a></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- #END: Two Column Example -->
+            
+            <!-- #BEGIN: One Column Example -->
+            <div class="space-below-xl">
+              <table class="module">
+                <tr>
+                  <td class="frame">
+                    <table class="pane">
+                      <tr>
+                        <td class="text-center text-top">
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="top"><![endif]-->
+                          <div class="col col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-center">
+                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                  <div class="p"><a href="##" class="btn-default">Call to action</a></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- #END: Two Column Example -->
+            
+            <!-- #BEGIN: One Column Example -->
+            <div class="space-below-xl">
+              <table class="module callout">
+                <tr>
+                  <td class="frame">
+                    <table class="pane">
+                      <tr>
+                        <td class="text-center text-top">
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="top"><![endif]-->
+                          <div class="col col-fill text-top">
+                            <table>
+                              <tr>
+                                <td class="content text-center">
+                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                  <div class="p"><a href="##" class="btn-subdued">Call to action</a></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- #END: Two Column Example -->
 
           </div>
 
