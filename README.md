@@ -3,7 +3,7 @@ A modern approach to email templating
 
 **requires use of inliner (e.g. https://putsmail.com/inliner or Litmus inlining tool)**
 
-##### Support
+#### Support
 - Outlook 2002-2016, outlook.com & Windows Mail (Outlook Express & DPI versions **are supported**)
 - Yahoo Mail
 - Lotus 8.5+ (Lotus 7 **not supported**)
@@ -14,30 +14,108 @@ A modern approach to email templating
 
 ##### To Do
 - [x] initial upload of base layout and elements
-- [ ] inlined versions
+- [ ] compiled & inlined versions
 - [ ] create various themes for template
 - [ ] additional element styling
 - [ ] additional modules
 
-###### Modules
+---
+
+### Modules
 Majority of your code will be repetative with slight variations, primarily in width's.
 
-* `.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
-* add `.two-col` or `.three-col` to the `.module` container for column modules.
-  * conditional comment `<td>` will require a `width` attribute with a `%` value if more than one column is present.
-  * `.two-col` and `.three-col` adjusts `max-width` values, but conditional comment `<td>`'s values will need to update to `50%` or `33.333%` respectively (if offset, e.g. sidebars, the larger column's `<td>` will need a width of `66.666%`).
+##### Single column Module
+
+`.col` doesn't automatically fill empty space, use `.col-fill` to force `100%` width.
 
 ```HTML
-<table class="module bordered">
+<table class="module two-col">
   <tr>
-    <td>
-      <table class="inner">
-        <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="638"><tr><td align="center" style="font-size:0" valign="top""><![endif]-->
-        <div class="col col-fill text-top">
-          <table>
-            <tr>
-              <td class="content text-left">
-                <div class="p">
+    <td class="frame">
+      <table class="pane">
+        <tr>
+          <td class="text-center text-top">
+            <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0" valign="top"><![endif]-->
+            <div class="col col-fill text-top">
+              <table>
+                <tr>
+                  <td class="content text-left">
+                    <div class="p"></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+```
+
+##### Two column modules
+
+* adding a `.two-col` class onto the `.module` wrapper will apply a max-width `.col` class allowing space for 2 columns.
+* conditional comments `<td>` gets a `width="50%"` to accomodate Outlook Express engine clients.
+
+```HTML
+<table class="module two-col">
+  <tr>
+    <td class="frame">
+      <table class="pane">
+        <tr>
+          <td class="text-center text-top">
+            <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+            <div class="col col-fill text-top">
+              <table>
+                <tr>
+                  <td class="content text-left">
+                    <div class="p">Column one</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+            <div class="col col-fill text-top">
+              <table>
+                <tr>
+                  <td class="content text-left">
+                    <div class="p">Column two</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+```
+
+---
+
+
+##### Three column modules
+Basically you're just adding the snippet below and updating the values exactly as you did with the above `.two-col` module.
+
+* adding a `.three-col` class onto the `.module` wrapper will apply a max-width `.col` class allowing space for 3 columns.
+* conditional comments `<td>` gets a `width="33.333%"` to accomodate Outlook Express engine clients.
+
+```HTML
+...
+<!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="33.333%"><![endif]-->
+<div class="col col-fill text-top">
+  <table>
+    <tr>
+      <td class="content text-left">
+        <div class="p">Column two</div>
+      </td>
+    </tr>
+  </table>
+</div>
 ...
 ```
 
