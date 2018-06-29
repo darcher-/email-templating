@@ -22,7 +22,8 @@ A modern approach to email templating
   * [Two Columns](#twocol)
     * [Image Columns](#imgcol) 
     * [Alternate Columns](#altcol) 
-  * [Three Columns](#threecol)   
+  * [Three Columns](#threecol)
+  * [Borders](#borders)
 * [Support](#support)
 
 ---
@@ -39,7 +40,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 `.col` fits to content, use `.col-fill` to force `100%` width to fill empty whitespace.
 
 ```HTML
-<table class="module two-col">
+<table class="module two-col flat">
   <tr>
     <td class="frame">
       <table class="pane">
@@ -72,7 +73,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 * conditional comments `<td>` gets a `width="50%"` to accomodate Outlook Express engine clients.
 
 ```HTML
-<table class="module two-col">
+<table class="module two-col flat">
   <tr>
     <td class="frame">
       <table class="pane">
@@ -117,7 +118,7 @@ Images need to be handled slightly differently then text content, as such, there
 * `.text-middle` and  `valign="middle"` replace `top` values (if you want vertically alignmed middle).
 
 ```HTML
-<table class="module two-col">
+<table class="module two-col flat">
   <tr>
     <td class="frame">
       <table class="pane">
@@ -177,7 +178,7 @@ This is identical to the two column modules, the below snippet would be added di
 * conditional comments `<td>` gets a `width="33.333%"` to accomodate Outlook Express engine clients.
 
 ```HTML
-<table class="module two-col">
+<table class="module two-col flat">
 ...
 <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="33.333%"><![endif]-->
 <div class="col col-fill text-top">
@@ -190,6 +191,19 @@ This is identical to the two column modules, the below snippet would be added di
   </table>
 </div>
 ...
+```
+
+<a name="borders"/>
+
+#### Modules Borders
+Adding borders is as simple as adding one class.
+
+```HTML
+<!-- this adds a border -->
+<table class="module bordered">
+
+<!-- this doesn't have a border -->
+<table class="module flat">
 ```
 
 **As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
