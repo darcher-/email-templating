@@ -22,34 +22,34 @@ A modern approach to email templating
 **Layout code block description:**
 Majority of your code will be repetative with slight variations, primarily in width's.
 
-```HTML
++ `.col` container will only need an additional class if it's a sidebar or uneven width.
++ conditional comment `<td>` will require a `width` attribute with a `%` value if more than one column is present.
++ `.two-col` and `.three-col` adjusts `max-width` values, but conditional comment `%` values will need to update to `50%` or `33.333%` respectively.
 
-<table>
+```HTML
+<table class="module sidebar-left bordered">
   <tr>
     <td>
-      <!--[if (gte mso 9)|(IE)]>
-      <table align="center" bgcolor="{{six digit hex color e.g. #ffffff}}" border="0" cellpadding="0" cellspacing="0" width="{{pixel value width e.g. 640}}">
-        <tr>
-          <td align="center" style="font-size:0;" valign="top" width="{{percent value width e.g. 100%}}">
-      <![endif]-->
+      <table class="inner">
+        <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="638"><tr><td align="center" style="font-size:0" valign="top""><![endif]-->
+        <div class="col col-fill text-top">
+          <table>
+            <tr>
+              <td class="content text-left">
+                <div class="p">
+```
 
-      <div>
-        <table>
-          <tr>
-            <td>
-              <div>...</div>
-            </td>
-          </tr>
-        </table>
-      </div>
-  
-      <!--[if (gte mso 9)|(IE)]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
-    </td>
-  </tr>
-</table>
+---
+
+**Alternating columns**
+To alternate columns, utilize the `dir="rtl` attribute, you will need to reset the direction on the `.content` wrapper, you just want to invert the containers.
+
+```HTML
+<table class="inner">
+  <tr>
+    <td class="text-center text-top" dir="rtl">
+ ... 
+      <td class="content text-left" dir="ltr">
+ ...
 
 ```
