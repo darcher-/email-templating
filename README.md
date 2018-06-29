@@ -40,7 +40,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
               <table>
                 <tr>
                   <td class="content text-left">
-                    <div class="p"></div>
+                    <div class="p">Column One</div>
                   </td>
                 </tr>
               </table>
@@ -116,13 +116,13 @@ This is identical to the two column modules, the below snippet would be added di
 ...
 ```
 
----
+**As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
 
 ###### Alternating columns
-To alternate columns, utilize the `dir="rtl"` attribute, you will need to reset the direction on the `.content` wrapper, you just want to invert the containers.
+To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
 
 ```HTML
-<table class="inner">
+<table class="pane">
   <tr>
     <td class="text-center text-top" dir="rtl">
 ... 
