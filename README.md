@@ -95,13 +95,10 @@ Majority of your code will be repetative with slight variations, primarily in wi
 </table>
 ```
 
----
-
-
 ##### Three column modules
-Basically you're just adding the snippet below and updating the values exactly as you did with the above `.two-col` module.
+This is identical to the two column modules, the below snippet would be added directly following the last `.col` closing `</div>` and then updating the widths as you did in the `.two-col` module. 
 
-* adding a `.three-col` class onto the `.module` wrapper will apply a max-width `.col` class allowing space for 3 columns.
+* adding a `.three-col` in place of the `.two-col` class on the `.module` wrapper will apply a max-width `.col` class allowing space for 3 columns.
 * conditional comments `<td>` gets a `width="33.333%"` to accomodate Outlook Express engine clients.
 
 ```HTML
@@ -111,7 +108,7 @@ Basically you're just adding the snippet below and updating the values exactly a
   <table>
     <tr>
       <td class="content text-left">
-        <div class="p">Column two</div>
+        <div class="p">Column three</div>
       </td>
     </tr>
   </table>
