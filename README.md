@@ -24,6 +24,8 @@ A modern approach to email templating
     * [Alternate Columns](#altcol) 
   * [Three Columns](#threecol)
   * [Borders](#borders)
+* [CSS](#css)
+  * [Utility Classes](#utils)
 * [Support](#support)
 
 ---
@@ -209,6 +211,26 @@ Adding borders is as simple as adding one class.
 **As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
 
 ---
+
+### CSS (Styling)
+
+#### Utilitiy Classes
+
+| Class           | Property       | Value  |
+|:--------------- |:-------------- |:------ |
+| .text-middle    | vertical-align | middle |
+| .text-top       | vertical-align | top    |
+| .text-left      | text-align     | left   |
+| .text-center    | text-align     | center |
+| .text-right     | text-align     | right  |
+| .pad-below-xl   | padding-bottom | 32px   |
+| .pad-below-lg   | padding-bottom | 16px   |
+| .pad-below-md   | padding-bottom | 8px    |
+| .pad-below-sm   | padding-bottom | 4px    |
+| .space-below-xl | Margin-bottom  | 32px   |
+| .space-below-lg | Margin-bottom  | 16px   |
+| .space-below-md | Margin-bottom  | 8px    |
+| .space-below-sm | Margin-bottom  | 4px    |
 
 <a name="support"/>
 
