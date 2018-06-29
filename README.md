@@ -11,11 +11,21 @@ A modern approach to email templating
 - [ ] additional element styling
 - [ ] additional modules
 
+##### Table of Contents 
+
+* [Modules](#modules)
+  * [One Column](#onecol)
+  * [Two Columns](#twocol)
+  * [Alternate Columns](#altcol) 
+  * [Three Columns](#threecol)   
+
 ---
 
+<a name="modules"/>
 ### Modules
 Majority of your code will be repetative with slight variations, primarily in width's.
 
+<a name="onecol"/>
 #### Single column Module
 
 `.col` fits to content, use `.col-fill` to force `100%` width to fill empty whitespace.
@@ -46,6 +56,21 @@ Majority of your code will be repetative with slight variations, primarily in wi
 </table>
 ```
 
+<a name="altcol"/>
+#### Alternating columns
+To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
+
+```HTML
+<table class="pane">
+  <tr>
+    <td class="text-center text-top" dir="rtl">
+... 
+      <td class="content text-left" dir="ltr">
+...
+
+```
+
+<a name="twocol"/>
 #### Two column modules
 
 * adding a `.two-col` class onto the `.module` wrapper will apply a max-width `.col` class allowing space for 2 columns.
@@ -87,6 +112,7 @@ Majority of your code will be repetative with slight variations, primarily in wi
 </table>
 ```
 
+<a name="threecol"/>
 #### Three column modules
 This is identical to the two column modules, the below snippet would be added directly following the last `.col` closing `</div>` and then updating the widths as you did in the `.two-col` module. 
 
@@ -110,19 +136,6 @@ This is identical to the two column modules, the below snippet would be added di
 ```
 
 **As I'm sure you've noticed, the bulk of the code is reusable as you apply varying columns down the page**
-
-#### Alternating columns
-To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
-
-```HTML
-<table class="pane">
-  <tr>
-    <td class="text-center text-top" dir="rtl">
-... 
-      <td class="content text-left" dir="ltr">
-...
-
-```
 
 ---
 
