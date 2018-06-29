@@ -16,7 +16,8 @@ A modern approach to email templating
 * [Modules](#modules)
   * [One Column](#onecol)
   * [Two Columns](#twocol)
-  * [Alternate Columns](#altcol) 
+    * [Image Columns](#imgcol) 
+    * [Alternate Columns](#altcol) 
   * [Three Columns](#threecol)   
 
 ---
@@ -56,21 +57,6 @@ Majority of your code will be repetative with slight variations, primarily in wi
     </td>
   </tr>
 </table>
-```
-
-<a name="altcol"/>
-
-#### Alternating columns
-To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
-
-```HTML
-<table class="pane">
-  <tr>
-    <td class="text-center text-top" dir="rtl">
-... 
-      <td class="content text-left" dir="ltr">
-...
-
 ```
 
 <a name="twocol"/>
@@ -114,6 +100,63 @@ To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you w
     </td>
   </tr>
 </table>
+```
+
+<a name="imgcol"/>
+
+#### Images columns
+To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
+
+```HTML
+<table class="module two-col">
+  <tr>
+    <td class="frame">
+      <table class="pane">
+        <tr>
+          <td class="text-center text-top">
+            <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+            <div class="col col-fill text-middle">
+              <table align="center">
+                <tr>
+                  <td class="media-fill text-center">
+                  <!--or <td class="media-padded text-center"> if you want some space around your image -->
+                    <img src="https://placehold.it/320x400" width="320" height="400" alt>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0" valign="top" width="50%"><![endif]-->
+            <div class="col col-fill text-middle">
+              <table>
+                <tr>
+                  <td class="content text-left">
+                    <div class="p">Column w/ Image</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+```
+
+<a name="altcol"/>
+
+#### Alternating columns
+To alternate columns, utilize the `dir="rtl"` attribute on the `.pane td`, you will need to reset the direction on the `.content` wrapper so your text displays correctly. All we're doing is inverting the containers. This will be advantageous when you have images to the left or right of text, but want those images to alternate down the page.
+
+```HTML
+<table class="pane">
+  <tr>
+    <td class="text-center text-top" dir="rtl">
+... 
+      <td class="content text-left" dir="ltr">
+...
+
 ```
 
 <a name="threecol"/>
