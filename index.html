@@ -107,6 +107,7 @@
       .media-fill img,
       .template,
       .module,
+      .pane,
       .col-fill { width: 100% }
 
       .col { display: inline-block }
@@ -146,7 +147,10 @@
       /** FONT STYLES */
 
       .h1 { font: 300 38px/1.25 sans-serif }
-      .p { font: 300 16px/1.45 sans-serif }
+      .h2 { font: 300 30px/1.25 sans-serif }
+      .h3 { font: 300 26px/1.25 sans-serif }
+      .h4 { font: 300 18px/1.25 sans-serif }
+      .p,
       .a { font: 300 16px/1.45 sans-serif }
 
       /**
@@ -154,7 +158,9 @@
         this is a very base styling, will expand upon it.
       */
 
-      body, .template, .container { background-color: #ecf0f1 }
+      body,
+      .template,
+      .container { background-color: #ecf0f1 }
       .callout,
       .bordered { background-color: #00bef0 }
       .flat,
@@ -185,25 +191,19 @@
         mso-border-alt: 8px solid #ffffff }
 
       .a-callout { color: #00bef0 }
-      .a-subdued { color: #ffffff }
-      
-      .callout .a-default,
-      .callout .h1,
-      .callout .p { color: #ffffff }
-      
-      .flat .a-default,
-      .bordered .a-default,
-      .flat .h1,
-      .bordered .h1,
-      .flat .p,
-      .bordered .p { color: #444444 }
+
+      .a-default,
+      .h1, .h2, .h3, .h4,
+      .p { color: #444444 }
+
+      .a-subdued, .callout .a-default, .callout .p,
+      .callout .h1, .callout .h2, .callout .h3, .callout .h4 { color: #ffffff }
 
       /** BORDER EDGES */
 
-      .btn-default, .btn-callout, .btn-bordered, .btn-subdued { border-radius: 2px }
-      .module { border-radius:2px }
-      .inner { border-radius:1px }
-
+      .btn-default, .btn-callout, .btn-bordered, .btn-subdued,
+      .module, .media-fill img { border-radius: 2px }
+      .pane { border-radius:1px }
     </style>
 
     </head>
@@ -244,8 +244,7 @@
                             <table>
                               <tr>
                                 <td class="content text-left">
-                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
-                                  <div class="p"><a href="##" class="btn-callout">Call to action</a></div>
+                                  <div class="p">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. <a href="##" class="a-callout">inani singulis</a> Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
                                 </td>
                               </tr>
                             </table>
@@ -266,24 +265,25 @@
                   <td class="frame">
                     <table class="pane">
                       <tr>
-                        <td class="text-center text-top" dir="rtl">
-                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="top" width="50%"><![endif]-->
-                          <div class="col col-fill text-top">
+                        <td class="text-center text-middle" dir="rtl">
+                          <!--[if (gte mso 9)|(IE)]><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="font-size:0;" valign="middle" width="50%"><![endif]-->
+                          <div class="col col-fill text-middle">
                             <table>
                               <tr>
                                 <td class="content text-left" dir="ltr">
-                                  <div class="p">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                  <div class="h3 space-below-md">Lorem Ipsum</div>
+                                  <div class="p space-below-lg">at tibique aliquando pri, vel <a href="##" class="a-default">inani singulis</a> ne novum habemus, ei inani singulis salutatus qui. </div>
+                                  <div class="p"><a href="##" class="btn-callout">Call to action</a></div>
                                 </td>
                               </tr>
                             </table>
                           </div>
-                          <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0;" valign="top" width="50%"><![endif]-->
-                          <div class="col col-fill text-top">
-                            <table>
+                          <!--[if (gte mso 9)|(IE)]></td><td align="center" style="font-size:0;" valign="middle" width="50%"><![endif]-->
+                          <div class="col col-fill text-middle">
+                            <table align="center">
                               <tr>
-                                <td class="content text-left" dir="ltr">
-                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei inani singulis salutatus qui. Vim aperiam facilisi theophrastus ne, cu mel eirmod impedit, eu comprehensam interpretaris est.</div>
-                                  <div class="p"><a href="##" class="a-callout">Call to action</a></div>
+                                <td class="media-fill text-center" dir="ltr">
+                                  <a href="##"><img src="https://placehold.it/318x218" width="318" height="218" alt></a>
                                 </td>
                               </tr>
                             </table>
@@ -298,7 +298,7 @@
             </div>
 
             <!-- #END: Two Column Example -->
-            
+
             <!-- #BEGIN: One Column Example -->
             <div class="space-below-xl">
               <table class="module">
@@ -312,7 +312,7 @@
                             <table>
                               <tr>
                                 <td class="content text-center">
-                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                  <div class="h2 space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
                                   <div class="p"><a href="##" class="btn-default">Call to action</a></div>
                                 </td>
                               </tr>
@@ -328,7 +328,7 @@
             </div>
 
             <!-- #END: Two Column Example -->
-            
+
             <!-- #BEGIN: One Column Example -->
             <div class="space-below-xl">
               <table class="module callout">
@@ -342,7 +342,7 @@
                             <table>
                               <tr>
                                 <td class="content text-center">
-                                  <div class="p space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
+                                  <div class="h4 space-below-lg">at tibique aliquando pri, vel ne novum habemus, ei <a href="##" class="a-default">inani singulis</a> salutatus qui.</div>
                                   <div class="p"><a href="##" class="btn-subdued">Call to action</a></div>
                                 </td>
                               </tr>
