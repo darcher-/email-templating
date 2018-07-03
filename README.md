@@ -23,7 +23,7 @@ A modern approach to email templating
     * [Image Columns](#imgcol) 
     * [Inverting Columns](#altcol) 
   * [Three Columns](#threecol)
-  * [Borders](#borders)
+  * [Borders & Backgrounds](#borders)
 * [CSS](#css)
   * [Utility Classes](#utils)
 * [Support](#support)
@@ -199,15 +199,21 @@ This is identical to the two column modules, the below snippet would be added di
 
 <a name="borders"/>
 
-#### Modules Borders
+#### Modules Borders & Backgrounds
 Adding borders is as simple as adding one class.
 
 ```HTML
-<!-- this adds a border -->
+<!-- this adds a border but no background color -->
 <table class="module bordered">
 
-<!-- this doesn't have a border -->
+<!-- this doesn't have a border but does have a background color-->
 <table class="module flat">
+
+<!-- this has both a background color and border -->
+<table class="module flat bordered">
+
+<!-- no background color or border-->
+<table class="module"> 
 ```
 
 ---
